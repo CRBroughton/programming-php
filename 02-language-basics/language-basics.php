@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 ## Statements
 
 $a = 1;
@@ -43,9 +44,9 @@ foreach ($shortMap as $key => $value) {
 // Objects / Classes
 
 class Person {
-    public $name = "";
+    public string $name = "";
 
-    function name ($newname = null) {
+    function name (string $newname = null): string {
         if (!is_null($newname)) {
             $this->name = $newname;
         }
@@ -67,7 +68,7 @@ $$foo = "baz";
 
 // pointers
 
-function &returnReference(&$value) {
+function &returnReference(int &$value): int {
     // Modify $value in some way
     $value += 10;
     return $value;
