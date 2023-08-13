@@ -86,7 +86,9 @@ function test() {
         echo "I an function 1";
     };
 
-    return [$test2];
+    $test = fn() => 1 + 2;
+
+    return [$test2, $test];
 };
 
 list($test2) = test();
