@@ -59,4 +59,23 @@ $ed = new Person;
 $ed->name('Edison');
 
 echo $ed->name;
+
+// variable variables
+
+$foo = "bar";
+$$foo = "baz";
+
+// pointers
+
+function &returnReference(&$value) {
+    // Modify $value in some way
+    $value += 10;
+    return $value;
+}
+
+$originalValue = 5;
+$reference = &returnReference($originalValue);
+
+echo $originalValue;  // Output: 15
+
 ?>
