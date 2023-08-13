@@ -79,4 +79,19 @@ $reference = &returnReference($originalValue);
 
 echo $originalValue;  // Output: 15
 
+
+// destructing stuff
+function test() {
+    $test2 = function() {
+        echo "I an function 1";
+    };
+
+    return [$test2];
+};
+
+list($test2) = test();
+
+$test2();
+
+
 ?>
